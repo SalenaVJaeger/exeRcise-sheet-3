@@ -2,7 +2,7 @@
 title: "Exercise #3"
 subtitle: "Fortgeschrittene Statistische Software für NF"
 author: "Maryon Rümmler (12550544), Oleksandra Bogdanova (12761875), Salena Jaeger (12702740)"
-output: distill::distill_article
+output: html_document
 ---
 
 ## General Remarks
@@ -43,7 +43,7 @@ c)  For all of the following tasks in this exercise sheet we ask you to
 
 d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a
     commit after this answer, see *1c*)
-    ```{r}
+```{r}
 print(" strengths: convenient for group projects/ collaborations, allows you to revert actions
 
     weakness: difficult to understand at first, not suited for large
@@ -125,7 +125,7 @@ if (total_2023 > total_2022) {
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
-    ```{r}
+```{r}
 
 babynames_2023 <- babynames_2023 %>% mutate(year = 2023)
 babynames_2022 <- babynames_2022 %>% mutate(year = 2022)
@@ -172,7 +172,7 @@ b)  Download the dataset and track it in git.
 ```{r}
 library(readr)
 alcohol_consumption <- read_csv("data/Alcohol consumption by type since 1890 (Alexander & Holmes, 2017).csv")
-View(alcohol_consumption)
+
 ```
 
 c)  Put the name / title of the dataset and a link to it below.
@@ -195,7 +195,9 @@ f)  Create a meaningful plot / figure with the dataset. Make sure to
     correctly label the figure.
 
 ```{r, fig.cap= "Per Capita Alcohol Consumption in the United States (1890-Present)"}
-
+library(dplyr)
+library(ggplot2)
+library(tidyr)
 colnames(alcohol_consumption) <- c("Country", "Year", "Wine", "Beer", "Spirits")
 
 us_alcohol_data <- alcohol_consumption %>%
