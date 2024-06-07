@@ -105,6 +105,7 @@ babynames_2023$Anzahl <- as.numeric(gsub("[^0-9]", "", babynames_2023$Anzahl))
 babynames_2022$Anzahl <- as.numeric(gsub("[^0-9]", "", babynames_2022$Anzahl))
 
 ```
+This solution converts the Anzahl column to a numeric type, making the data suitable for analysis, but it comes with the risk of losing some information and introducing inaccuracies. This solution replaces any character that is not a digit (0-9) with an empty string. It could disrupt some information ( such as 4 oder weniger), but without transformations analysis would be hardly possible.
 
 c)  Calculate the total number of babies born in Munich in 2022
     and 2023. Which year had the bigger baby-boom?
