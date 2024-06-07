@@ -109,6 +109,19 @@ This solution converts the Anzahl column to a numeric type, making the data suit
 
 c)  Calculate the total number of babies born in Munich in 2022
     and 2023. Which year had the bigger baby-boom?
+```{r}
+
+total_2023 <- sum(babynames_2023$Anzahl, na.rm = TRUE)
+total_2022 <- sum(babynames_2022$Anzahl, na.rm = TRUE)
+
+
+if (total_2023 > total_2022) {
+  cat("In 2023 more babies were born a total of", total_2023, "babies.")
+} else {
+  cat("In 2022 more babies were born with a total of", total_2022, "babies.")
+}
+
+```
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
