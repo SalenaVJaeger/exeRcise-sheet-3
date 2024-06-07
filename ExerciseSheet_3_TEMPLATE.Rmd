@@ -61,7 +61,10 @@ a)  Create a new repository on GitHub in your account named
     `exeRcise-sheet-3`. Make sure you create a **public repository** so
     we are able to see it for grading. Add the link to the repository
     below:
+    Please note that the work is in master branch, not in main< which is default
      https://github.com/SalenaVJaeger/exeRcise-sheet-3 
+     
+     
 
 b)  Push your code to this new repository by copying and executing the
     snippet on github listed under
