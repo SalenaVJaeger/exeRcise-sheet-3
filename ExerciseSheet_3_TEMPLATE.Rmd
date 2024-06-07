@@ -189,6 +189,11 @@ How has the per capita consumption of wine, beer, and spirits changed over time 
 This question is interesting because it allows us to observe trends and shifts in alcohol consumption preferences over a long historical period, which can provide insights into cultural, economic, and policy changes in the chosen country.
     
 e)  Use R to answer your chosen question.
+
+f)  Create a meaningful plot / figure with the dataset. Make sure to
+    provide a figure caption (via the chunk options / Rmarkdown) and
+    correctly label the figure.
+
 ```{r, fig.cap= "Per Capita Alcohol Consumption in the United States (1890-Present)"}
 
 colnames(alcohol_consumption) <- c("Country", "Year", "Wine", "Beer", "Spirits")
@@ -210,10 +215,6 @@ ggplot(us_alcohol_data_long, aes(x = Year, y = Consumption, color = Type)) +
 
 ```
 
-
-f)  Create a meaningful plot / figure with the dataset. Make sure to
-    provide a figure caption (via the chunk options / Rmarkdown) and
-    correctly label the figure.
 
 ## Final Note
 
